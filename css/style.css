@@ -1,0 +1,355 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --gold:#C8A24A;
+    --black:#0F0F10;
+    --gray:#1A1A1C;
+    --white:#F5F5F5;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--black);
+    color:var(--white);
+    overflow-x:hidden;
+}
+
+h1,h2,h3,.logo{
+    font-family:'Cinzel',serif;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* ===== HEADER ===== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:999;
+    background:rgba(15,15,16,.85);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.logo{
+    color:var(--gold);
+    font-size:28px;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:35px;
+    transition:.3s;
+    position:relative;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    height:100vh;
+    background:url("../assets/img/hero.jpg") center/cover;
+    display:flex;
+    align-items:center;
+    position:relative;
+    padding:0 8%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,
+    rgba(0,0,0,.82),
+    rgba(0,0,0,.35));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:600px;
+}
+
+.hero span{
+    color:var(--gold);
+    letter-spacing:4px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:68px;
+    margin:18px 0;
+    line-height:1.1;
+}
+
+.hero p{
+    color:#d7d7d7;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn{
+    background:var(--gold);
+    color:black;
+    padding:16px 34px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(200,162,74,.35);
+}
+
+/* ===== SERVIÇOS ===== */
+
+.services{
+    padding:110px 8%;
+}
+
+.services h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+    color:var(--gold);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--gray);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.05);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
+}
+
+.card h3{
+    margin-bottom:14px;
+    color:var(--gold);
+}
+
+.card p{
+    font-size:22px;
+    font-weight:600;
+}
+
+/* ===== GALERIA ===== */
+
+.gallery{
+    padding:0 8% 110px;
+}
+
+.gallery h2{
+    text-align:center;
+    font-size:42px;
+    color:var(--gold);
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.grid img{
+    height:360px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:.35s;
+}
+
+.grid img:hover{
+    transform:scale(1.03);
+}
+
+/* ===== EQUIPE ===== */
+
+.team{
+    padding:110px 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.left img{
+    border-radius:24px;
+}
+
+.right h2{
+    font-size:44px;
+    color:var(--gold);
+}
+
+.right h3{
+    margin:10px 0 25px;
+    color:#ddd;
+}
+
+.right p{
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+.right ul{
+    list-style:none;
+    margin-top:25px;
+}
+
+.right li{
+    margin-bottom:12px;
+}
+
+/* ===== SHOP ===== */
+
+.shop{
+    position:relative;
+    height:500px;
+}
+
+.shop img{
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.45);
+}
+
+.shop .text{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.shop h2{
+    font-size:52px;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+/* ===== REVIEWS ===== */
+
+.reviews{
+    padding:110px 8%;
+}
+
+.reviews h2{
+    text-align:center;
+    color:var(--gold);
+    font-size:42px;
+    margin-bottom:45px;
+}
+
+.review{
+    background:var(--gray);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.05);
+    transition:.3s;
+}
+
+.review:hover{
+    border-color:var(--gold);
+}
+
+.review p{
+    margin:18px 0;
+    color:#ddd;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:#090909;
+    text-align:center;
+    padding:70px 20px;
+}
+
+footer h2{
+    color:var(--gold);
+    margin-bottom:18px;
+}
+
+footer p{
+    margin-bottom:30px;
+    color:#bbb;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media(max-width:950px){
+
+.hero h1{
+    font-size:48px;
+}
+
+.team{
+    grid-template-columns:1fr;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+nav{
+    display:none;
+}
+
+.shop h2{
+    font-size:38px;
+}
+
+}
