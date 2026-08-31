@@ -44,6 +44,8 @@ header{
     background:rgba(15,15,16,.85);
     backdrop-filter:blur(14px);
     border-bottom:1px solid rgba(255,255,255,.05);
+
+    position:relative;
 }
 
 .logo{
@@ -328,30 +330,58 @@ footer p{
     color:#bbb;
 }
 
-/* ===== RESPONSIVO ===== */
+/* ===== MENU MOBILE ===== */
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    color:#C8A24A;
+    cursor:pointer;
+}
 
 @media(max-width:950px){
 
-.hero h1{
-    font-size:48px;
-}
+    .menu-toggle{
+        display:block;
+    }
 
-.team{
-    grid-template-columns:1fr;
-}
+    nav{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        right:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        padding:25px 8%;
+        gap:18px;
+        z-index:1000;
+    }
 
-.grid{
-    grid-template-columns:1fr;
-}
+    nav.active{
+        display:flex;
+    }
 
-nav{
-    display:none;
-}
+    nav a{
+        margin:0;
+    }
 
-.shop h2{
-    font-size:38px;
-}
+    .hero h1{
+        font-size:48px;
+    }
 
+    .team{
+        grid-template-columns:1fr;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .shop h2{
+        font-size:38px;
+    }
 }
 
 .whatsapp{

@@ -65,14 +65,13 @@ window.addEventListener("load", () => {
 
 // Menu
 
-const menu=document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
 
-const nav=document.querySelector("nav");
-
-menu.onclick=()=>{
-
-nav.classList.toggle("active");
-
+if (menu && nav) {
+    menu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
 }
 
 // Lightbox
